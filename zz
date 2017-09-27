@@ -1,0 +1,190 @@
+#!/bin/bash
+
+
+cd
+
+sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.local
+
+sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.local
+
+sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.d/rc.local
+
+sed -i '$ i\screen -AmdS ban /root/ban.sh' /etc/rc.d/rc.local
+
+echo "0 0 * * * root /usr/local/bin/user-expire" > /etc/cron.d/user-expire
+
+echo "0 0 * * * root /usr/local/bin/user-expire-pptp" > /etc/cron.d/user-expire-pptp
+
+
+cat > /root/ban.sh <<END3
+
+#!/bin/bash
+
+#/usr/local/bin/user-ban
+
+END3
+
+
+cat > /root/limit.sh <<END3
+
+#!/bin/bash
+
+#/usr/local/bin/user-limit
+
+END3
+
+
+cd /usr/local/bin
+
+wget https://raw.githubusercontent.com/KeningauVPS/manu/master/menu.sh && bash menu.sh
+
+
+
+cp /usr/local/bin/premium-script /usr/local/bin/menu
+
+cd
+
+wget http://autoscriptnobita.tk/MASTER7752/user-list && bash user-list
+
+wget http://autoscriptnobita.tk/configdual7m/buatakun && bash buatakun
+
+wget http://autoscriptnobita.tk/configdual7m/generate && bash generate
+
+wget http://autoscriptnobita.tk/configdual7m/trial && bash trial
+
+wget http://autoscriptnobita.tk/configdual7m/userpass
+mv ./userpass /usr/bin/userpass
+chmod +x /usr/bin/userpass
+
+wget http://autoscriptnobita.tk/configdual7m/userrenew
+mv ./userrenew /usr/bin/userrenew
+chmod +x /usr/bin/userrenew
+
+
+wget http://autoscriptnobita.tk/configdual7m/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+
+wget http://autoscriptnobita.tk/configdual7m/userlogin
+mv ./userlogin /usr/bin/userlogin
+chmod +x /usr/bin/userlogin
+
+
+wget http://autoscriptnobita.tk/configdual7m/userlogin
+mv ./userlogin /usr/bin/userlogin
+chmod +x /usr/bin/userlogin
+
+
+wget http://autoscriptnobita.tk/configdual7m/autolimit
+mv ./autolimit /usr/bin/autolimit
+chmod +x /usr/bin/autolimit
+
+
+wget http://autoscriptnobita.tk/configdual7m/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+
+wget http://autoscriptnobita.tk/configdual7m/userdetail
+mv ./userdetail /usr/bin/userdetail
+chmod +x /usr/bin/userdetail
+
+
+wget http://autoscriptnobita.tk/configdual7m/deleteuserexpire
+mv ./deleteuserexpire /usr/bin/deleteuserexpire
+chmod +x /usr/bin/deleteuserexpire
+
+
+wget http://autoscriptnobita.tk/configdual7m/autokilluser
+mv ./autokilluser /usr/bin/autokilluser
+chmod +x /usr/bin/autokilluser
+
+
+wget http://autoscriptnobita.tk/configdual7m/userban
+mv ./userban /usr/bin/userban
+chmod +x /usr/bin/userban
+
+
+wget http://autoscriptnobita.tk/configdual7m/userunban
+mv ./userunban /usr/bin/userunban
+chmod +x /usr/bin/userunban
+
+
+wget http://autoscriptnobita.tk/configdual7m/userlock
+mv ./userlock /usr/bin/userlock
+chmod +x /usr/bin/userlock
+
+wget http://autoscriptnobita.tk/configdual7m/userunlock
+mv ./userunlock /usr/bin/userunlock
+chmod +x /usr/bin/userunlock
+
+
+wget http://autoscriptnobita.tk/configdual7m/loglimit
+mv ./loglimit /usr/bin/loglimit
+chmod +x /usr/bin/loglimit
+
+
+wget http://autoscriptnobita.tk/configdual7m/logban
+mv ./logban /usr/bin/logban
+chmod +x /usr/bin/logban
+
+
+wget http://autoscriptnobita.tk/configdual7m/useraddpptp
+mv ./useraddpptp /usr/bin/useraddpptp
+chmod +x /usr/bin/useraddpptp
+
+
+wget http://autoscriptnobita.tk/configdual7m/userdeletepptp
+mv ./userdeletepptp /usr/bin/userdeletepptp
+chmod +x /usr/bin/userdeletepptp
+
+
+wget http://autoscriptnobita.tk/configdual7m/detailpptp
+mv ./detailpptp /usr/bin/detailpptp
+chmod +x /usr/bin/detailpptp
+
+wget http://autoscriptnobita.tk/configdual7m/userloginpptp
+mv ./userloginpptp /usr/bin/userloginpptp
+chmod +x /usr/bin/userloginpptp
+
+
+wget http://autoscriptnobita.tk/configdual7malluserpptp
+mv ./alluserpptp /usr/bin/alluserpptp
+chmod +x /usr/bin/alluserpptp
+
+
+
+wget http://autoscriptnobita.tk/configdual7mautoreboot
+mv ./autoreboot /usr/bin/autoreboot
+chmod +x /usr/bin/autoreboot
+
+
+apt-get install python
+wget http://autoscriptnobita.tk/configdual7m/speedtest.py
+chmod +x speedtest.py
+
+
+wget http://autoscriptnobita.tk/configdual7m/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+wget http://autoscriptnobita.tk/configdual7m/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+
+wget https://raw.githubusercontent.com/KeningauVPS/manu/master/menu.sh && chmod +x menu.sh && ./menu.sh
+
+
+rm -f /root/iplist.txt
+
+rm -f /root/update
+
+rm -f /root/debian7latest.sh
+
+rm -f /root/debian7latest.sh.x
+
+rm -f /root/ddos-deflate-master.zip
+
+rm -f /root/.bash_history && history -c
